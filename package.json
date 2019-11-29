@@ -1,12 +1,12 @@
 {
-  "name": "promise-props-nested",
+  "name": "resolve-nested-promises",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "jest --coverage &&  ./cc-test-reporter format-coverage -t lcov coverage/lcov.info && ./cc-test-reporter upload-coverage -r 1fd91f489899d2088d44a14da8f7e25a933123cd58e81bec0ea1b2bcd3332638",
+    "test": "jest --coverage &&  ./cc-test-reporter format-coverage -t lcov coverage/lcov.info && ./cc-test-reporter upload-coverage -r 82cc77c68ff8fc5953c5273be3730e8b77bd26952f22c4dfdc84ae75b02d3a4c",
     "test:watch": "jest --watchAll"
   },
   "author": "Amazing Design (https://amazingdesign.eu)",
@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.6.3",
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "np": "^5.1.3"
   }
 }

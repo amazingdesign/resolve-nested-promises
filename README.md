@@ -1,3 +1,6 @@
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5eaef55eac70f40d5fa2/test_coverage)](https://codeclimate.com/github/amazingdesign/resolve-nested-promises/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5eaef55eac70f40d5fa2/maintainability)](https://codeclimate.com/github/amazingdesign/resolve-nested-promises/maintainability)
+
 # resolve-nested-promises
 
 ## What for? 
