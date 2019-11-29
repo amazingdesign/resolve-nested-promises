@@ -1,4 +1,6 @@
 import { resolveNestedPromises } from '../src'
+import realData from './realLifeData'
+import realDataWithBluebird from './realLifeDataWithBluebird'
 
 describe('resolves', () => {
 
@@ -148,6 +150,26 @@ describe('resolves', () => {
         b: { c: { d: { e: 'e' } } },
       }
     ]
+
+    return resolveNestedPromises(PAYLOAD)
+      .then((result) => {
+        expect(result).toEqual(EXPECTED_RESULT)
+      })
+  })
+
+  it('real life example', () => {
+    const PAYLOAD = realData.payload
+    const EXPECTED_RESULT = realData.result
+
+    return resolveNestedPromises(PAYLOAD)
+      .then((result) => {
+        expect(result).toEqual(EXPECTED_RESULT)
+      })
+  })
+
+  it('real life example with bluebird', () => {
+    const PAYLOAD = realDataWithBluebird.payload
+    const EXPECTED_RESULT = realDataWithBluebird.result
 
     return resolveNestedPromises(PAYLOAD)
       .then((result) => {

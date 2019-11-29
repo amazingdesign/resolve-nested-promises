@@ -1,8 +1,15 @@
+const isLikelyAPromise = (obj) => (
+  typeof obj.then === 'function'
+  &&
+  Object.getPrototypeOf(obj).constructor !== Object
+)
+
 export const resolveNestedPromises = (payload) => {
   if (
     typeof payload !== 'object' ||
     payload === null ||
-    payload instanceof Promise
+    payload instanceof Promise ||
+    isLikelyAPromise(payload)
   ) {
     return Promise.resolve(payload)
   }
