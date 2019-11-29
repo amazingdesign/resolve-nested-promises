@@ -1,9 +1,11 @@
 export const resolveNestedPromises = (payload) => {
-  if (typeof payload !== 'object') return Promise.resolve(payload)
-
-  if (payload === null) return Promise.resolve(payload)
-  
-  if (payload instanceof Promise) return payload
+  if (
+    typeof payload !== 'object' ||
+    payload === null ||
+    payload instanceof Promise
+  ) {
+    return Promise.resolve(payload)
+  }
 
   if (Array.isArray(payload)) return Promise.all(payload.map(resolveNestedPromises))
 
